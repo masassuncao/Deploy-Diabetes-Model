@@ -1,0 +1,58 @@
+{% extends 'base.html' %}
+
+{% block head%}
+
+{% endblock %}
+
+{% block body %}
+
+<div>
+    <h1>Deploy de Modelo para Previsão de Diabetes</h1>
+
+    <form action = "/predict" method = "POST">
+        <div>
+            <label for = "gest">Número de gestações: </label> 
+            <input type = "text" name = "gest" id = "gest">
+        </div>
+        
+        <div>
+            <label for = "glic">Concentração de glicose: </label>
+            <input type = "text" name = "glic" id = "glic">
+        </div>
+
+        <div>
+            <label for = "diast">Pressão diastólica (mmHg): </label>
+            <input type = "text" name = "diast" id = "diast">
+        </div>
+
+        <div>
+            <label for = "dobra">Espessura da dobra cutânea do tríceps (mm): </label>
+            <input type = "text" name = "dobra" id = "dobra">
+        </div>
+
+        <div>
+            <label for = "insul">Nível de insulina (muU/ml): </label>
+            <input type = "text" name = "insul" id = "insul">
+        </div>
+
+        <div>
+            <label for = "imc">Índice de massa corporal (IMC): </label>
+            <input type = "text" name = "imc" id = "imc">
+        </div>
+
+        <div>
+            <label for = "genet">Herança genética: </label>
+            <input type = "text" name = "genet" id = "genet">
+        </div>
+
+        <div>
+            <label for = "idade">Idade (anos): </label>
+            <input type = "text" name = "idade" id = "idade">
+        </div>
+
+        
+        <input type = "submit" value = "Previsão">
+    </form>
+</div>
+
+{% endblock %}
